@@ -1,0 +1,4 @@
+2026-10-12 22:53:34 | WARNING | django.request | /Users/suyogkhadka/Desktop/DRf/ecommerce/backend/drf_ecommerce/myenv/lib/python3.14/site-packages/django/utils/log.py:283 in log_message() | Bad Request: /about/about/
+2026-10-12 22:53:34 | WARNING | django.server | /Users/suyogkhadka/Desktop/DRf/ecommerce/backend/drf_ecommerce/myenv/lib/python3.14/site-packages/django/utils/log.py:283 in log_message() | "POST /about/about/ HTTP/1.1" 400 71
+2026-10-14 22:02:49,985 WARNING [django.server:283] "POST /about/about/ HTTP/1.1" 400 71
+2026-10-14 22:03:31,161 WARNING [django.server:283] "POST /about/about/ HTTP/1.1" 400 85

@@ -1,0 +1,27 @@
+2026-10-12 22:49:49 | INFO  | apps.demo | req=- | <string>:8 in <module>() | Order 12 created for user 5
+2026-10-12 22:49:49 | ERROR | apps.demo | req=- | /Users/suyogkhadka/Desktop/DRf/ecommerce/backend/drf_ecommerce/_common/logging.py:214 in log_exception() | Checkout failed for order #12 | KeyError: 'missing' | at <string>:12 in <module>() | req=-
+Traceback (most recent call last):
+  File "<string>", line 12, in <module>
+    x = d['missing'] + undefined_var
+        ~^^^^^^^^^^^
+KeyError: 'missing'
+2026-10-12 22:49:49 | WARNING | apps.demo | req=- | /Users/suyogkhadka/Desktop/DRf/ecommerce/backend/drf_ecommerce/_common/logging.py:252 in log_validation_errors() | Register rejected | email: Enter a valid email. | password: ***MASKED***
+2026-10-12 22:50:00 | WARNING | apps.demo | req=- | /Users/suyogkhadka/Desktop/DRf/ecommerce/backend/drf_ecommerce/_common/logging.py:255 in log_validation_errors() | Register rejected | email: Enter a valid email. | password: Too short. | password: Too common.
+2026-10-12 22:50:00 | ERROR | apps.demo | req=- | /Users/suyogkhadka/Desktop/DRf/ecommerce/backend/drf_ecommerce/_common/logging.py:214 in log_exception() | Payment failed | ZeroDivisionError: division by zero | at <string>:12 in <module>() | req=-
+Traceback (most recent call last):
+  File "<string>", line 12, in <module>
+    1/0
+    ~^~
+ZeroDivisionError: division by zero
+2026-10-12 22:50:04 | INFO  | app.request | req=6d087e73 | /Users/suyogkhadka/Desktop/DRf/ecommerce/backend/drf_ecommerce/_common/middleware.py:56 in __call__() | -> GET /api/health/ | user=anon | ip=127.0.0.1 | req=6d087e73
+2026-10-12 22:50:04 | INFO  | app.request | req=6d087e73 | /Users/suyogkhadka/Desktop/DRf/ecommerce/backend/drf_ecommerce/_common/middleware.py:72 in __call__() | <- GET /api/health/ | 200 in 0ms | req=6d087e73
+2026-10-12 22:50:04 | INFO  | app.request | req=8a4bae03 | /Users/suyogkhadka/Desktop/DRf/ecommerce/backend/drf_ecommerce/_common/middleware.py:56 in __call__() | -> POST /api/checkout/ | user=anon | ip=127.0.0.1 | req=8a4bae03
+2026-10-12 22:50:04 | ERROR | app.request | req=8a4bae03 | /Users/suyogkhadka/Desktop/DRf/ecommerce/backend/drf_ecommerce/_common/logging.py:214 in log_exception() | UNHANDLED 500 on POST /api/checkout/ | POST /api/checkout/ | user=anon | ip=127.0.0.1 | ValueError: coupon XYZ is expired | at <string>:13 in view_boom() | req=8a4bae03
+Traceback (most recent call last):
+  File "/Users/suyogkhadka/Desktop/DRf/ecommerce/backend/drf_ecommerce/_common/middleware.py", line 59, in __call__
+    response = self.get_response(request)
+  File "<string>", line 13, in view_boom
+    raise ValueError('coupon XYZ is expired')
+ValueError: coupon XYZ is expired
+2026-10-12 22:50:04 | WARNING | app.api | req=- | /Users/suyogkhadka/Desktop/DRf/ecommerce/backend/drf_ecommerce/_common/exceptions.py:76 in readable_exception_handler() | API 400 on POST /api/register/ | user=anon | view=object | ValidationError: email: Enter valid email. | password: Too short.
+2026-10-12 22:50:04 | WARNING | app.api | req=- | /Users/suyogkhadka/Desktop/DRf/ecommerce/backend/drf_ecommerce/_common/exceptions.py:76 in readable_exception_handler() | API 404 on GET /api/products/99/ | user=anon | view=object | NotFound: No Product matches the given query.

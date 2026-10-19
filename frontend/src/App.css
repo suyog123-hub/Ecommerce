@@ -1,0 +1,5 @@
+/* Shared NiceShop-like base - replaces Vite demo styles */
+.ns-layout { min-height: 100vh; display: flex; flex-direction: column; background: #fff; color: #0f172a; }
+.ns-main-content { flex: 1; }
+.ns-container { max-width: 1200px; margin: 0 auto; padding-left: 16px; padding-right: 16px; }
+a { color: inherit; }
