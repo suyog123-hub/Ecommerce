@@ -13,7 +13,9 @@ class AboutView(APIView):
     def get(self, request):
         try:
             about = About.objects.first()
-            serializer = AboutSerializer(about)
+            if not about:
+                return Response({"error": "About not found."}, status=status.HTTP_404_NOT_FOUND)
+            serializer = AboutSerializer(about, context={'request': request})
             return Response(serializer.data, status=status.HTTP_200_OK)
         
         except Exception as e:

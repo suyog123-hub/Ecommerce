@@ -1,19 +1,23 @@
 """Development settings: local Postgres (falls back to env vars)."""
-import os
+from decouple import config
 
 from .base import *  # noqa: F401,F403
 
-DEBUG = True
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+DEBUG = config('DJANGO_DEBUG', default=True, cast=bool)
+ALLOWED_HOSTS = config(
+    'DJANGO_ALLOWED_HOSTS',
+    default='localhost,127.0.0.1',
+    cast=lambda v: [s.strip() for s in v.split(',')],
+)
 
-# Local dev DB. Override with env vars if needed.
-DATABASES = {    'default': {
+DATABASES = {
+    'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Drf_ecommerce',
-        'USER': 'postgres',
-        'PASSWORD': 'Suyogpostgres@1234',
-        'HOST': 'localhost',
-        'PORT': '5432'
+        'NAME': config('DB_NAME', default='Drf_ecommerce'),
+        'USER': config('DB_USER', default='postgres'),
+        'PASSWORD': config('DB_PASSWORD', default=''),
+        'HOST': config('DB_HOST', default='localhost'),
+        'PORT': config('DB_PORT', default='5432'),
     }
 }
 

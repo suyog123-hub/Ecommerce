@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import heroChair from '../assets/hero-chair.webp'
 import product3 from '../assets/product-3.webp'
@@ -8,20 +7,9 @@ import productM5 from '../assets/product-m-5.webp'
 import product8 from '../assets/product-8.webp'
 import product12 from '../assets/product-12.webp'
 import productDemo3 from '../assets/product-demo-3.webp'
-import api from '../lib/api.js'
 import './Home.css'
 
 function Home() {
-  const [data, setData] = useState(null)
-  const [error, setError] = useState('')
-
-  useEffect(() => {
-    api
-      .get('/health/')
-      .then((res) => setData(res.data))
-      .catch((err) => setError(err.message))
-  }, [])
-
   return (
     <div>
       {/* Hero Section - exact copy from NiceShop demo */}
@@ -169,14 +157,6 @@ function Home() {
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Backend status */}
-      <section className="ns-container ns-status">
-        <h2>Home page</h2>
-        <p>GET /api/health/ → Django:</p>
-        {error && <p className="ns-error">Error: {error} (is Django on :8000?)</p>}
-        {data ? <pre>{JSON.stringify(data, null, 2)}</pre> : !error && <p>Loading...</p>}
       </section>
     </div>
   )

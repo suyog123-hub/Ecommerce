@@ -7,9 +7,8 @@ from decouple import config
 # base.py lives here: backend/drf_ecommerce/drf_ecommerce/settings/base.py
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
-SECRET_KEY = os.environ.get(
-    'DJANGO_SECRET_KEY',
-    'django-insecure-!5g74c=adb$_t#5mqoh*e99b+gry+nls#f*e207l5%%+=3$g!v',
+SECRET_KEY = config(
+    'DJANGO_SECRET_KEY'
 )
 
 INSTALLED_APPS = [
@@ -75,6 +74,9 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = 'static/'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
