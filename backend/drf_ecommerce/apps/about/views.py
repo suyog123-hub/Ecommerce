@@ -5,7 +5,6 @@ from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated, AllowAny , IsAdminUser
 from rest_framework import status
 import logging
-
 logger = logging.getLogger(__name__) 
 class AboutView(APIView):
     permission_classes = [AllowAny]
