@@ -22,7 +22,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'apps.home',
     'apps.about',
-    'apps.prodcut',
+    'apps.product',
 ]
 
 MIDDLEWARE = [
