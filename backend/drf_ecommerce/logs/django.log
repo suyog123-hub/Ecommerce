@@ -3,3 +3,6 @@
 2026-10-14 22:02:49,985 WARNING [django.server:283] "POST /about/about/ HTTP/1.1" 400 71
 2026-10-14 22:03:31,161 WARNING [django.server:283] "POST /about/about/ HTTP/1.1" 400 85
 2026-10-24 22:08:15,349 WARNING [django.server:249] "GET / HTTP/1.1" 404 2933
+2026-10-31 13:27:56,565 WARNING [django.server:283] "GET / HTTP/1.1" 404 3005
+2026-10-31 13:27:56,660 WARNING [django.server:283] "GET /favicon.ico HTTP/1.1" 404 3056
+2026-10-31 14:25:55,383 WARNING [django.server:283] "GET / HTTP/1.1" 404 3005
